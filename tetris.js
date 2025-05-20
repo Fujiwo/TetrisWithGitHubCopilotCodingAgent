@@ -264,6 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (checkCollision()) {
             gameOver = true;
             clearInterval(gameLoop);
+            startButton.textContent = "Start New Game";
             alert('Game Over! Your score: ' + score);
             return;
         }
@@ -492,8 +493,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (isPaused) {
             clearInterval(gameLoop);
+            startButton.textContent = "Resume";
         } else {
             startGameLoop();
+            startButton.textContent = "Pause";
         }
     }
     
@@ -524,6 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         initBoard();
         spawnNewPiece();
+        startButton.textContent = "Pause";
         startGameLoop();
     }
     
@@ -556,7 +560,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('keydown', handleKeyDown);
     }
     
-    // Start the game
+    // Initialize but wait for player to start the game
     init();
     draw();
+    
+    // Wait for player to press start button before starting game loop
+    isPaused = true;
 });
