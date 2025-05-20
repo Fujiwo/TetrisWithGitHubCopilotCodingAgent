@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.game-info {
+    width: 200px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.score-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.next-piece-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#next-piece {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.controls {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#start-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#start-button:hover {
+    background-color: #45a049;
+}
+
+#game-board {
+    width: 300px;
+    height: 600px;
+    background-color: #111;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.cell {
+    border: 1px solid #333;
+}
+
+.tetromino {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Tetromino colors */
+.I {
+    background-color: #00f0f0; /* Cyan */
+}
+
+.J {
+    background-color: #0000f0; /* Blue */
+}
+
+.L {
+    background-color: #f0a000; /* Orange */
+}
+
+.O {
+    background-color: #f0f000; /* Yellow */
+}
+
+.S {
+    background-color: #00f000; /* Green */
+}
+
+.T {
+    background-color: #a000f0; /* Purple */
+}
+
+.Z {
+    background-color: #f00000; /* Red */
+}
+
+.ghost {
+    opacity: 0.3;
+}
